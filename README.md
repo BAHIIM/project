@@ -1,6 +1,4 @@
 GitHub Profile Analyzer
-Project Name: GitHub Profile Analyzer
-Tagline: Analyze and visualize your GitHub activity with ease.
 
 Table of Contents
 Project Overview
@@ -14,6 +12,8 @@ Challenges
 Progress
 Contributing
 License
+Authors
+Screenshot
 
 Project Overview
 GitHub Profile Analyzer is a web application designed to help developers analyze and visualize their GitHub activity. By integrating with the GitHub API, users can authenticate via GitHub OAuth, fetch their repository and commit data, and view interactive visualizations of their activity.
@@ -25,36 +25,30 @@ Interactive Charts: Analyze your coding patterns and contribution frequency thro
 Customizable Reports: Generate reports based on your activity data.
 
 Technologies
-Frontend: React.js
-Backend: Node.js, Express.js
-Database: MongoDB
+Frontend: HTML, CSS, JavaScript
+Backend: PHP
+Database: MySQL
 API Gateway: GitHub API
 Deployment: AWS
 Alternative Technologies and Trade-offs
 Frontend:
-Alternative: Angular
-Trade-off: Angular provides a robust framework with a strong community, but React.js was chosen for its simplicity and flexibility, which allows for faster development and easier integration with existing JavaScript libraries.
+Alternative: React.js
+Trade-off: React.js offers a component-based architecture and state management, but HTML, CSS, and JavaScript were chosen for their simplicity and wide browser compatibility.
 Database:
-Alternative: MySQL
-Trade-off: MySQL offers strong relational database capabilities, but MongoDB was chosen for its flexibility in handling JSON-like documents and scalability for handling large volumes of GitHub data.
+Alternative: MongoDB
+Trade-off: MongoDB provides flexible schema design, but MySQL was chosen for its strong relational database capabilities and support for complex queries.
 
 Setup and Installation
 Prerequisites
-Node.js
-npm (Node Package Manager)
-MongoDB
+PHP
+MySQL
+Apache or Nginx server
 Installation
 Clone the repository:
 bash
 Copier le code
-git clone https://github.com/bahiim/project.git
+git clone https://github.com/bahiim/github-profile-analyzer.git
 cd github-profile-analyzer
-
-
-Install dependencies:
-bash
-Copier le code
-npm install
 
 
 Set up environment variables: Create a .env file in the root directory and add the following:
@@ -62,17 +56,14 @@ bash
 Copier le code
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
-MONGODB_URI=your_mongodb_uri
-SESSION_SECRET=your_session_secret
+DB_HOST=your_database_host
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASS=your_database_password
 
 
-Run the application:
-bash
-Copier le code
-npm start
-
-
-Access the application: Open your web browser and navigate to http://localhost:3000.
+Import the database: Import the database.sql file into your MySQL database.
+Run the application: Start your web server and navigate to the application.
 
 Usage
 Log in with GitHub: Navigate to the application and click on the "Log in with GitHub" button.
@@ -91,7 +82,7 @@ GET /api/commits: Retrieves commit history for a specified repository.
 GET /api/analysis: Returns analyzed data and visualizations based on user activity.
 
 Data Model
-Collections
+Tables
 Users
 id: Unique identifier
 username: GitHub username
@@ -99,22 +90,22 @@ profile_data: JSON object containing user profile information
 access_token: OAuth access token
 Repositories
 id: Unique identifier
-user_id: Reference to Users collection
+user_id: Reference to Users table
 repo_name: Name of the repository
 repo_data: JSON object containing repository information
 Commits
 id: Unique identifier
-repo_id: Reference to Repositories collection
+repo_id: Reference to Repositories table
 commit_data: JSON object containing commit information
 
 Challenges
 Technical Challenge
-One of the major technical challenges was linking the site to the database and ensuring proper data persistence. Initially, the backend server failed to establish a connection with the MongoDB instance, causing errors during data storage and retrieval. The challenge required in-depth debugging, reconfiguring database connection settings, and collaborating with the database administration team to adjust network and access permissions.
+One of the major technical challenges was linking the site to the database and ensuring proper data persistence. Initially, the backend server failed to establish a connection with the MySQL database, causing errors during data storage and retrieval. The challenge required in-depth debugging, reconfiguring database connection settings, and collaborating with the database administration team to adjust network and access permissions.
 Non-Technical Challenge
 Coordinating the project timeline and managing team morale was a significant non-technical challenge. The database integration issue led to delays, which frustrated the team. We addressed this by reassessing our timeline, redistributing tasks, and improving communication and documentation practices. This helped in maintaining team morale and ensuring continued progress despite setbacks.
 
 Progress
-Progress Rating: 6/10
+Progress Rating: 7/10
 Explanation of Progress Assessment:
 Completed Parts: UI development, initial backend setup, partial OAuth integration.
 Incomplete Aspects: Full database integration, data persistence, advanced features.
@@ -131,8 +122,20 @@ Push to the branch: git push origin feature-branch
 Create a Pull Request
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the Team Bahiim|khalid|amine. See the LICENSE file for details.
 
-For any questions or support, please contact oulmaamerabderrahim@gmail.com
+Authors
+Abderrahim Oulmaamer
+LinkedIn
+GitHub
+Khalid Benhamou
+LinkedIn
+GitHub
+Amine Bifden
+LinkedIn
+GitHub
 
+Screenshot
+
+For any questions or support, please contact [oulmaamerabderrahim@gmail.com].
 
