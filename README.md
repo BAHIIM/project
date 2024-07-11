@@ -126,14 +126,14 @@ This project is licensed under the Team Bahiim|khalid|amine. See the LICENSE fil
 
 Authors
 Abderrahim Oulmaamer
-LinkedIn : https://www.linkedin.com/in/abderrahim-oulmaamer/
-GitHub : https://github.com/Bahiim
+LinkedIn
+GitHub
 Khalid Benhamou
-LinkedIn : https://www.linkedin.com/in/khalid-benhamou/
-GitHub : https://github.com/5alidev
+LinkedIn
+GitHub
 Amine Bifden
-LinkedIn : https://www.linkedin.com/in/bifden-amine/
-GitHub : https://github.com/GoAmine
+LinkedIn
+GitHub
 
 Screenshot
 
